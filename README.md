@@ -1,8 +1,8 @@
 # vue-barcode
 
-[![Build Status](https://travis-ci.org/fengyuanchen/vue-barcode.svg)](https://travis-ci.org/fengyuanchen/vue-barcode) [![Coverage Status](https://img.shields.io/codecov/c/github/fengyuanchen/vue-barcode.svg)](https://codecov.io/gh/fengyuanchen/vue-barcode) [![Downloads](https://img.shields.io/npm/dm/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Version](https://img.shields.io/npm/v/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode)
+[![Build Status](https://img.shields.io/travis/fengyuanchen/vue-barcode.svg)](https://travis-ci.org/fengyuanchen/vue-barcode) [![Coverage Status](https://img.shields.io/codecov/c/github/fengyuanchen/vue-barcode.svg)](https://codecov.io/gh/fengyuanchen/vue-barcode) [![Downloads](https://img.shields.io/npm/dm/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Version](https://img.shields.io/npm/v/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Dependencies](https://img.shields.io/david/fengyuanchen/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode)
 
-> Bar code component for [Vue.js](https://vuejs.org), bases on [JsBarcode](https://github.com/lindell/JsBarcode).
+> Bar code component for [Vue.js](https://vuejs.org/), bases on [JsBarcode](https://github.com/lindell/JsBarcode).
 
 - [Website](https://fengyuanchen.github.io/vue-barcode)
 
@@ -89,10 +89,10 @@ The tag name of the component's root element.
 
 ## Versioning
 
-Maintained under the [Semantic Versioning guidelines](https://semver.org).
+Maintained under the [Semantic Versioning guidelines](https://semver.org/).
 
 ## License
 
-[MIT](https://opensource.org/licenses/MIT) © [Chen Fengyuan](https://chenfengyuan.com)
+[MIT](https://opensource.org/licenses/MIT) © [Chen Fengyuan](https://chenfengyuan.com/)
 
 [⬆ back to top](#table-of-contents)
