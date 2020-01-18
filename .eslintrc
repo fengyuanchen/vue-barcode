@@ -5,9 +5,26 @@
     "browser": true
   },
   "rules": {
+    "import/no-extraneous-dependencies": "off",
     "no-param-reassign": "off",
     "valid-jsdoc": ["error", {
       "requireReturn": false
     }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["test/**/*.js"],
+      "env": {
+        "mocha": true
+      },
+      "globals": {
+        "expect": true,
+        "Vue": true,
+        "VueBarcode": true
+      },
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ]
 }
