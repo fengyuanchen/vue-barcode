@@ -1,17 +1,17 @@
 /*!
- * vue-barcode v1.0.0
+ * vue-barcode v1.0.1
  * https://fengyuanchen.github.io/vue-barcode
  *
  * Copyright 2018-present Chen Fengyuan
  * Released under the MIT license
  *
- * Date: 2018-10-21T13:33:03.798Z
+ * Date: 2020-01-18T06:33:23.843Z
  */
 
 'use strict';
 
 function unwrapExports (x) {
-	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x.default : x;
+	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
 }
 
 function createCommonjsModule(fn, module) {
@@ -657,7 +657,7 @@ exports.default = CODE128C;
 
 unwrapExports(CODE128C_1);
 
-var CODE128$1 = createCommonjsModule(function (module, exports) {
+var CODE128 = createCommonjsModule(function (module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -688,13 +688,13 @@ exports.CODE128B = _CODE128B2.default;
 exports.CODE128C = _CODE128C2.default;
 });
 
-unwrapExports(CODE128$1);
-var CODE128_1$1 = CODE128$1.CODE128C;
-var CODE128_2 = CODE128$1.CODE128B;
-var CODE128_3 = CODE128$1.CODE128A;
-var CODE128_4 = CODE128$1.CODE128;
+unwrapExports(CODE128);
+var CODE128_1$1 = CODE128.CODE128C;
+var CODE128_2 = CODE128.CODE128B;
+var CODE128_3 = CODE128.CODE128A;
+var CODE128_4 = CODE128.CODE128;
 
-var constants$2 = createCommonjsModule(function (module, exports) {
+var constants$1 = createCommonjsModule(function (module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -726,13 +726,13 @@ var EAN5_STRUCTURE = exports.EAN5_STRUCTURE = ['GGLLL', 'GLGLL', 'GLLGL', 'GLLLG
 var EAN13_STRUCTURE = exports.EAN13_STRUCTURE = ['LLLLLL', 'LLGLGG', 'LLGGLG', 'LLGGGL', 'LGLLGG', 'LGGLLG', 'LGGGLL', 'LGLGLG', 'LGLGGL', 'LGGLGL'];
 });
 
-unwrapExports(constants$2);
-var constants_1$1 = constants$2.SIDE_BIN;
-var constants_2$1 = constants$2.MIDDLE_BIN;
-var constants_3$1 = constants$2.BINARIES;
-var constants_4$1 = constants$2.EAN2_STRUCTURE;
-var constants_5$1 = constants$2.EAN5_STRUCTURE;
-var constants_6$1 = constants$2.EAN13_STRUCTURE;
+unwrapExports(constants$1);
+var constants_1$1 = constants$1.SIDE_BIN;
+var constants_2$1 = constants$1.MIDDLE_BIN;
+var constants_3$1 = constants$1.BINARIES;
+var constants_4$1 = constants$1.EAN2_STRUCTURE;
+var constants_5$1 = constants$1.EAN5_STRUCTURE;
+var constants_6$1 = constants$1.EAN13_STRUCTURE;
 
 var encoder = createCommonjsModule(function (module, exports) {
 
@@ -745,7 +745,7 @@ Object.defineProperty(exports, "__esModule", {
 // Encode data string
 var encode = function encode(data, structure, separator) {
 	var encoded = data.split('').map(function (val, idx) {
-		return constants$2.BINARIES[structure[idx]];
+		return constants$1.BINARIES[structure[idx]];
 	}).map(function (val, idx) {
 		return val ? val[data[idx]] : '';
 	});
@@ -839,12 +839,12 @@ var EAN = function (_Barcode) {
 			var textOptions = { fontSize: this.fontSize };
 			var guardOptions = { height: this.guardHeight };
 
-			return [{ data: constants$2.SIDE_BIN, options: guardOptions }, { data: this.leftEncode(), text: this.leftText(), options: textOptions }, { data: constants$2.MIDDLE_BIN, options: guardOptions }, { data: this.rightEncode(), text: this.rightText(), options: textOptions }, { data: constants$2.SIDE_BIN, options: guardOptions }];
+			return [{ data: constants$1.SIDE_BIN, options: guardOptions }, { data: this.leftEncode(), text: this.leftText(), options: textOptions }, { data: constants$1.MIDDLE_BIN, options: guardOptions }, { data: this.rightEncode(), text: this.rightText(), options: textOptions }, { data: constants$1.SIDE_BIN, options: guardOptions }];
 		}
 	}, {
 		key: 'encodeFlat',
 		value: function encodeFlat() {
-			var data = [constants$2.SIDE_BIN, this.leftEncode(), constants$2.MIDDLE_BIN, this.rightEncode(), constants$2.SIDE_BIN];
+			var data = [constants$1.SIDE_BIN, this.leftEncode(), constants$1.MIDDLE_BIN, this.rightEncode(), constants$1.SIDE_BIN];
 
 			return {
 				data: data.join(''),
@@ -930,7 +930,7 @@ var EAN13 = function (_EAN) {
 		key: 'leftEncode',
 		value: function leftEncode() {
 			var data = this.data.substr(1, 6);
-			var structure = constants$2.EAN13_STRUCTURE[this.data[0]];
+			var structure = constants$1.EAN13_STRUCTURE[this.data[0]];
 			return _get(EAN13.prototype.__proto__ || Object.getPrototypeOf(EAN13.prototype), 'leftEncode', this).call(this, data, structure);
 		}
 	}, {
@@ -1122,7 +1122,7 @@ var EAN5 = function (_Barcode) {
 	}, {
 		key: 'encode',
 		value: function encode() {
-			var structure = constants$2.EAN5_STRUCTURE[checksum(this.data)];
+			var structure = constants$1.EAN5_STRUCTURE[checksum(this.data)];
 			return {
 				data: '1011' + (0, _encoder2.default)(this.data, structure, '01'),
 				text: this.text
@@ -1183,7 +1183,7 @@ var EAN2 = function (_Barcode) {
 		key: 'encode',
 		value: function encode() {
 			// Choose the structure based on the number mod 4
-			var structure = constants$2.EAN2_STRUCTURE[parseInt(this.data) % 4];
+			var structure = constants$1.EAN2_STRUCTURE[parseInt(this.data) % 4];
 			return {
 				// Start bits + Encode the two digits with 01 in between
 				data: '1011' + (0, _encoder2.default)(this.data, structure, '01'),
@@ -1608,7 +1608,7 @@ var EAN_UPC_4 = EAN_UPC.EAN5;
 var EAN_UPC_5 = EAN_UPC.EAN8;
 var EAN_UPC_6 = EAN_UPC.EAN13;
 
-var constants$4 = createCommonjsModule(function (module, exports) {
+var constants$2 = createCommonjsModule(function (module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -1619,10 +1619,10 @@ var END_BIN = exports.END_BIN = '11101';
 var BINARIES = exports.BINARIES = ['00110', '10001', '01001', '11000', '00101', '10100', '01100', '00011', '10010', '01010'];
 });
 
-unwrapExports(constants$4);
-var constants_1$2 = constants$4.START_BIN;
-var constants_2$2 = constants$4.END_BIN;
-var constants_3$2 = constants$4.BINARIES;
+unwrapExports(constants$2);
+var constants_1$2 = constants$2.START_BIN;
+var constants_2$2 = constants$2.END_BIN;
+var constants_3$2 = constants$2.BINARIES;
 
 var ITF_1 = createCommonjsModule(function (module, exports) {
 
@@ -1671,7 +1671,7 @@ var ITF = function (_Barcode) {
 			}).join('');
 
 			return {
-				data: constants$4.START_BIN + encoded + constants$4.END_BIN,
+				data: constants$2.START_BIN + encoded + constants$2.END_BIN,
 				text: this.text
 			};
 		}
@@ -1681,9 +1681,9 @@ var ITF = function (_Barcode) {
 	}, {
 		key: 'encodePair',
 		value: function encodePair(pair) {
-			var second = constants$4.BINARIES[pair[1]];
+			var second = constants$2.BINARIES[pair[1]];
 
-			return constants$4.BINARIES[pair[0]].split('').map(function (first, idx) {
+			return constants$2.BINARIES[pair[0]].split('').map(function (first, idx) {
 				return (first === '1' ? '111' : '1') + (second[idx] === '1' ? '000' : '0');
 			}).join('');
 		}
@@ -1756,7 +1756,7 @@ exports.default = ITF14;
 
 unwrapExports(ITF14_1);
 
-var ITF$1 = createCommonjsModule(function (module, exports) {
+var ITF = createCommonjsModule(function (module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -1777,9 +1777,9 @@ exports.ITF = _ITF2.default;
 exports.ITF14 = _ITF4.default;
 });
 
-unwrapExports(ITF$1);
-var ITF_1$1 = ITF$1.ITF14;
-var ITF_2 = ITF$1.ITF;
+unwrapExports(ITF);
+var ITF_1$1 = ITF.ITF14;
+var ITF_2 = ITF.ITF;
 
 var MSI_1 = createCommonjsModule(function (module, exports) {
 
@@ -2046,7 +2046,7 @@ exports.default = MSI1110;
 
 unwrapExports(MSI1110_1);
 
-var MSI$1 = createCommonjsModule(function (module, exports) {
+var MSI = createCommonjsModule(function (module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -2082,12 +2082,12 @@ exports.MSI1010 = _MSI8.default;
 exports.MSI1110 = _MSI10.default;
 });
 
-unwrapExports(MSI$1);
-var MSI_1$1 = MSI$1.MSI1110;
-var MSI_2 = MSI$1.MSI1010;
-var MSI_3 = MSI$1.MSI11;
-var MSI_4 = MSI$1.MSI10;
-var MSI_5 = MSI$1.MSI;
+unwrapExports(MSI);
+var MSI_1$1 = MSI.MSI1110;
+var MSI_2 = MSI.MSI1010;
+var MSI_3 = MSI.MSI11;
+var MSI_4 = MSI.MSI10;
+var MSI_5 = MSI.MSI;
 
 var pharmacode_1 = createCommonjsModule(function (module, exports) {
 
@@ -2348,11 +2348,11 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = {
 	CODE39: CODE39_1.CODE39,
-	CODE128: CODE128$1.CODE128, CODE128A: CODE128$1.CODE128A, CODE128B: CODE128$1.CODE128B, CODE128C: CODE128$1.CODE128C,
+	CODE128: CODE128.CODE128, CODE128A: CODE128.CODE128A, CODE128B: CODE128.CODE128B, CODE128C: CODE128.CODE128C,
 	EAN13: EAN_UPC.EAN13, EAN8: EAN_UPC.EAN8, EAN5: EAN_UPC.EAN5, EAN2: EAN_UPC.EAN2, UPC: EAN_UPC.UPC, UPCE: EAN_UPC.UPCE,
-	ITF14: ITF$1.ITF14,
-	ITF: ITF$1.ITF,
-	MSI: MSI$1.MSI, MSI10: MSI$1.MSI10, MSI11: MSI$1.MSI11, MSI1010: MSI$1.MSI1010, MSI1110: MSI$1.MSI1110,
+	ITF14: ITF.ITF14,
+	ITF: ITF.ITF,
+	MSI: MSI.MSI, MSI10: MSI.MSI10, MSI11: MSI.MSI11, MSI1010: MSI.MSI1010, MSI1110: MSI.MSI1110,
 	pharmacode: pharmacode_1.pharmacode,
 	codabar: codabar_1.codabar,
 	GenericBarcode: GenericBarcode_1.GenericBarcode
@@ -3391,7 +3391,7 @@ for (var name in _barcodes2.default) {
 		registerBarcode(_barcodes2.default, name);
 	}
 }
-function registerBarcode(barcodes$$1, name) {
+function registerBarcode(barcodes, name) {
 	API.prototype[name] = API.prototype[name.toUpperCase()] = API.prototype[name.toLowerCase()] = function (text, options) {
 		var api = this;
 		return api._errorHandler.wrapBarcodeCall(function () {
@@ -3400,7 +3400,7 @@ function registerBarcode(barcodes$$1, name) {
 
 			var newOptions = (0, _merge2.default)(api._options, options);
 			newOptions = (0, _optionsFromStrings2.default)(newOptions);
-			var Encoder = barcodes$$1[name];
+			var Encoder = barcodes[name];
 			var encoded = encode(text, Encoder, newOptions);
 			api._encodings.push(encoded);
 
@@ -3554,7 +3554,7 @@ module.exports = JsBarcode;
 
 var JsBarcode = unwrapExports(JsBarcode_1);
 
-var index$a = {
+var index = {
   name: 'barcode',
   props: {
     /**
@@ -3607,4 +3607,4 @@ var index$a = {
   }
 };
 
-module.exports = index$a;
+module.exports = index;
