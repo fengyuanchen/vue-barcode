@@ -1,19 +1,26 @@
-import JsBarcode from 'jsbarcode';
+import { defineComponent, h } from 'vue';
+import * as JsBarcode from 'jsbarcode';
 
-export default {
-  name: 'barcode',
+export default defineComponent({
+  name: 'VueBarcode',
 
   props: {
     /**
      * The value of the bar code.
      */
-    value: null,
+    value: {
+      type: String,
+      default: undefined,
+    },
 
     /**
      * The options for the bar code generator.
      * {@link https://github.com/lindell/JsBarcode#options}
      */
-    options: Object,
+    options: {
+      type: Object,
+      default: undefined,
+    },
 
     /**
      * The tag name of the component's root element.
@@ -22,10 +29,6 @@ export default {
       type: String,
       default: 'canvas',
     },
-  },
-
-  render(createElement) {
-    return createElement(this.tag, this.$slots.default);
   },
 
   watch: {
@@ -44,6 +47,10 @@ export default {
     },
   },
 
+  mounted() {
+    this.generate();
+  },
+
   methods: {
     /**
      * Generate bar code.
@@ -53,7 +60,7 @@ export default {
     },
   },
 
-  mounted() {
-    this.generate();
+  render() {
+    return h(this.tag, this.$slots.default);
   },
-};
+});
