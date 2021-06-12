@@ -1,6 +1,6 @@
 # vue-barcode
 
-[![Coverage Status](https://img.shields.io/codecov/c/github/fengyuanchen/vue-barcode.svg)](https://codecov.io/gh/fengyuanchen/vue-barcode) [![Downloads](https://img.shields.io/npm/dm/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Version](https://img.shields.io/npm/v/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Gzip Size](https://img.shields.io/bundlephobia/minzip/@chenfengyuan/vue-barcode.svg)](https://unpkg.com/@chenfengyuan/vue-barcode/dist/vue-barcode.js)
+[![Coverage Status](https://img.shields.io/codecov/c/github/fengyuanchen/vue-barcode.svg)](https://codecov.io/gh/fengyuanchen/vue-barcode) [![Downloads](https://img.shields.io/npm/dm/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Version](https://img.shields.io/npm/v/@chenfengyuan/vue-barcode/next.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Gzip Size](https://img.shields.io/bundlephobia/minzip/@chenfengyuan/vue-barcode.svg)](https://unpkg.com/@chenfengyuan/vue-barcode/dist/vue-barcode.js)
 
 > Bar code component for Vue 3, bases on [JsBarcode](https://github.com/lindell/JsBarcode).
 
@@ -22,7 +22,7 @@ dist/
 ### Installation
 
 ```shell
-npm install vue jsbarcode @chenfengyuan/vue-barcode
+npm install vue@next jsbarcode @chenfengyuan/vue-barcode@next
 ```
 
 In browser:
