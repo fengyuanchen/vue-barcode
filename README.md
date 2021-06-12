@@ -1,6 +1,6 @@
 # vue-barcode
 
-[![Build Status](https://img.shields.io/github/workflow/status/fengyuanchen/vue-barcode/ci/main.svg)](https://github.com/fengyuanchen/vue-barcode/actions) [![Coverage Status](https://img.shields.io/codecov/c/github/fengyuanchen/vue-barcode.svg)](https://codecov.io/gh/fengyuanchen/vue-barcode) [![Downloads](https://img.shields.io/npm/dm/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Version](https://img.shields.io/npm/v/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Gzip Size](https://img.shields.io/bundlephobia/minzip/@chenfengyuan/vue-barcode.svg)](https://unpkg.com/@chenfengyuan/vue-barcode/dist/vue-barcode.js)
+[![Coverage Status](https://img.shields.io/codecov/c/github/fengyuanchen/vue-barcode.svg)](https://codecov.io/gh/fengyuanchen/vue-barcode) [![Downloads](https://img.shields.io/npm/dm/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Version](https://img.shields.io/npm/v/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Gzip Size](https://img.shields.io/bundlephobia/minzip/@chenfengyuan/vue-barcode.svg)](https://unpkg.com/@chenfengyuan/vue-barcode/dist/vue-barcode.js)
 
 > Bar code component for Vue 3, bases on [JsBarcode](https://github.com/lindell/JsBarcode).
 
@@ -36,10 +36,10 @@ In browser:
 ### Usage
 
 ```js
-import Vue from 'vue';
+import { createApp } from 'vue';
 import VueBarcode from '@chenfengyuan/vue-barcode';
 
-const app = Vue.createApp({});
+const app = createApp({});
 
 app.component(VueBarcode.name, VueBarcode);
 ```
