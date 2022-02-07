@@ -73,7 +73,7 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container pt-4">
         <div class="markdown-body">
           <readme />
         </div>
@@ -145,6 +145,7 @@ export default defineComponent({
 .markdown-body {
   table {
     display: table;
+    width: 100%;
   }
 
   code {
