@@ -1,21 +1,26 @@
 # vue-barcode
 
-[![Build Status](https://img.shields.io/travis/fengyuanchen/vue-barcode.svg)](https://travis-ci.org/fengyuanchen/vue-barcode) [![Coverage Status](https://img.shields.io/codecov/c/github/fengyuanchen/vue-barcode.svg)](https://codecov.io/gh/fengyuanchen/vue-barcode) [![Downloads](https://img.shields.io/npm/dm/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Version](https://img.shields.io/npm/v/@chenfengyuan/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode) [![Dependencies](https://img.shields.io/david/fengyuanchen/vue-barcode.svg)](https://www.npmjs.com/package/@chenfengyuan/vue-barcode)
-
-> Bar code component for [Vue.js](https://vuejs.org/), bases on [JsBarcode](https://github.com/lindell/JsBarcode).
+> Bar code component for [Vue 2](https://v2.vuejs.org/), bases on [JsBarcode](https://github.com/lindell/JsBarcode).
 
 - [Website](https://fengyuanchen.github.io/vue-barcode)
 
 ## Table of contents
 
-- [Main](#main)
-- [Getting started](#getting-started)
-- [Props](#props)
-- [Browser support](#browser-support)
-- [Versioning](#versioning)
-- [License](#license)
+- [vue-barcode](#vue-barcode)
+  - [Table of contents](#table-of-contents)
+  - [Main files](#main-files)
+  - [Getting started](#getting-started)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [Props](#props)
+    - [value](#value)
+    - [options](#options)
+    - [tag](#tag)
+  - [Browser support](#browser-support)
+  - [Versioning](#versioning)
+  - [License](#license)
 
-## Main
+## Main files
 
 ```text
 dist/
@@ -30,7 +35,7 @@ dist/
 ### Install
 
 ```shell
-npm install @chenfengyuan/vue-barcode vue
+npm install vue@2 @chenfengyuan/vue-barcode@1
 ```
 
 In browser:
