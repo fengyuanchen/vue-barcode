@@ -1,3 +1,7 @@
+## [2.0.1](https://github.com/fengyuanchen/vue-barcode/compare/v2.0.0...v2.0.1) (2022-10-15)
+
+
+
 # [2.0.0](https://github.com/fengyuanchen/vue-barcode/compare/v2.0.0-beta...v2.0.0) (2022-02-07)
 
 
