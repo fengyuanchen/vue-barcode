@@ -26,6 +26,10 @@ export default ['umd', 'esm'].map((format) => ({
       },
     };
 
+    if (format === 'umd') {
+      output.interop = 'esModule';
+    }
+
     if (format === 'esm') {
       output.file = pkg.module;
     }
