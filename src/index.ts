@@ -1,5 +1,5 @@
 import { defineComponent, h } from 'vue';
-import * as JsBarcode from 'jsbarcode';
+import JsBarcode from 'jsbarcode';
 
 export default defineComponent({
   name: 'VueBarcode',
