@@ -38,7 +38,7 @@ describe('props', () => {
         mounted() {
           setTimeout(() => {
             expect(wrapper.vm.$el.height).toBe(200);
-            this.options.height = 400;
+            (this as any).options.height = 400;
             setTimeout(() => {
               expect(wrapper.vm.$el.height).toBe(400);
               done();
@@ -118,7 +118,7 @@ describe('props', () => {
           setTimeout(() => {
             const oldDataURL = wrapper.vm.$el.toDataURL();
 
-            this.value = 'bar';
+            (this as any).value = 'bar';
             setTimeout(() => {
               const newDataURL = wrapper.vm.$el.toDataURL();
 
