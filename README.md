@@ -25,19 +25,19 @@ dist/
 Using npm:
 
 ```shell
-npm install vue@3 jsbarcode@3 @chenfengyuan/vue-barcode@2
+npm install jsbarcode@3 @chenfengyuan/vue-barcode@2
 ```
 
 Using pnpm:
 
 ```shell
-pnpm add vue@3 jsbarcode@3 @chenfengyuan/vue-barcode@2
+pnpm add jsbarcode@3 @chenfengyuan/vue-barcode@2
 ```
 
 Using Yarn:
 
 ```shell
-yarn add vue@3 jsbarcode@3 @chenfengyuan/vue-barcode@2
+yarn add jsbarcode@3 @chenfengyuan/vue-barcode@2
 ```
 
 Using CDN:
